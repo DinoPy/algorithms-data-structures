@@ -9,7 +9,7 @@ template <class T>
 std::vector<T> merge(std::vector<T> nums1, std::vector<T> nums2) {
     std::vector<T> final({}, nums1.size() + nums2.size());
     int i, j = 0;
-    while (nums1.size() < i && nums2.size() < j) {
+    while (nums1.size() > i && nums2.size() > j) {
         if (nums1[i] < nums2[j]) {
             final.push_back(nums1[i]);
             i += 1;

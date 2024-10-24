@@ -30,7 +30,7 @@ def merge_sort(nums):
 def merge(nums1, nums2):
     final = []
     i, j = 0, 0
-    while len(nums1) < i and len(nums2) < j:
+    while len(nums1) > i and len(nums2) > j:
         if nums1[i] < nums2[j]:
             final.append(nums1[i])
             i += 1

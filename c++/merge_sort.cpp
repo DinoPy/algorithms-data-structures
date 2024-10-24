@@ -7,8 +7,9 @@ std::vector<int> test_list = {5, 4, 3, 2, 1};
 
 template <class T>
 std::vector<T> merge(std::vector<T> nums1, std::vector<T> nums2) {
-    std::vector<T> final({}, nums1.size() + nums2.size());
-    int i, j = 0;
+    std::vector<T> final;
+    final.reserve(nums1.size() + nums2.size());
+    int i = 0, j = 0;
     while (nums1.size() > i && nums2.size() > j) {
         if (nums1[i] < nums2[j]) {
             final.push_back(nums1[i]);

@@ -6,20 +6,8 @@
 std::vector<int> test_list = {5, 4, 3, 2, 1};
 
 template <class T>
-std::vector<T> merge_sort(std::vector<T> nums) {
-    if (nums.size() < 2)
-        return nums;
-
-    auto sorted_left_side = merge_sort(
-        std::vector<T>(nums.begin(), nums.begin() + floor(nums.size() / 2)));
-    auto sorted_right_side = merge_sort(
-        std::vector<T>(nums.begin() + floor(nums.size() / 2), nums.end()));
-    return merge(sorted_left_side, sorted_right_side);
-}
-
-template <class T>
 std::vector<T> merge(std::vector<T> nums1, std::vector<T> nums2) {
-    std::vector<T> final = {};
+    std::vector<T> final({}, nums1.size() + nums2.size());
     int i, j = 0;
     while (nums1.size() < i && nums2.size() < j) {
         if (nums1[i] < nums2[j]) {
@@ -40,6 +28,17 @@ std::vector<T> merge(std::vector<T> nums1, std::vector<T> nums2) {
         j += 1;
     }
     return final;
+}
+
+template <class T> std::vector<T> merge_sort(std::vector<T> nums) {
+    if (nums.size() < 2)
+        return nums;
+
+    auto sorted_left_side = merge_sort(
+        std::vector<T>(nums.begin(), nums.begin() + floor(nums.size() / 2)));
+    auto sorted_right_side = merge_sort(
+        std::vector<T>(nums.begin() + floor(nums.size() / 2), nums.end()));
+    return merge(sorted_left_side, sorted_right_side);
 }
 
 int main(int argc, char *argv[]) {

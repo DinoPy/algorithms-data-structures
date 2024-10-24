@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "./helper_functions.cpp"
 
 std::vector<int> test_list = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 
@@ -21,12 +22,6 @@ std::vector<int> bubble_sort_1(std::vector<int> list) {
     return list;
 }
 
-void print(std::vector<int> list) {
-    for (auto &i : list) {
-        std::cout << i;
-    }
-    std::cout << std::endl;
-}
 
 int main(int argc, char *argv[]) {
     std::cout << "Original list: ";

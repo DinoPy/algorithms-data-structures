@@ -1,7 +1,5 @@
 #include "./helper_functions.cpp"
 
-std::vector<int> test_list = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-
 template <class T> std::vector<T> insertion_sort(std::vector<T> &nums) {
     for (int i = 0; i < nums.size(); ++i) {
         int j = i;

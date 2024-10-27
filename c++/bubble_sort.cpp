@@ -2,8 +2,6 @@
 #include <vector>
 #include "./helper_functions.cpp"
 
-std::vector<int> test_list = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-
 std::vector<int> bubble_sort_1(std::vector<int> list) {
     bool swapping = true;
     size_t end = list.size();

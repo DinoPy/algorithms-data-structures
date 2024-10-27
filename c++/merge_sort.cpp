@@ -1,9 +1,5 @@
 #include "./helper_functions.cpp"
 #include <cmath>
-#include <iostream>
-#include <vector>
-
-std::vector<int> test_list = {5, 4, 3, 2, 1};
 
 template <class T>
 std::vector<T> merge(std::vector<T> nums1, std::vector<T> nums2) {

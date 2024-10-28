@@ -1,2 +1,4 @@
 .ccls-cache/
 /c++/exec/
+/exec
+.DS_Store
